@@ -27,6 +27,9 @@
 \setlength{\parindent}{0pt}
 \setlist[itemize]{leftmargin=*,nosep,topsep=2pt}
 
+% Define contact separator
+\newcommand{\contactsep}{\hspace{4pt}|\hspace{4pt}}
+
 % Define section formatting
 \newcommand{\cvsection}[1]{%
     \vspace{8pt}%
@@ -65,7 +68,13 @@
 \newcommand{\togglepublications}{true}
 
 % Input the content file
-\input{cv-content.tex}
+% You can specify a different content file by defining \contentfile before compiling:
+% pdflatex "\def\contentfile{cv-content-software.tex}\input{cv-template.tex}"
+\ifdefined\contentfile
+    \input{\contentfile}
+\else
+    \input{cv-content.tex}
+\fi
 
 \begin{document}
 

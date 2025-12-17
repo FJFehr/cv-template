@@ -81,12 +81,14 @@ Turn sections on/off by changing `true` to `false`:
 ```latex
 \newcommand{\cvname}{Your Full Name}
 \newcommand{\cvcontact}{%
-    Email: your.email@example.com |
-    Phone: +1 (123) 456-7890 |
-    LinkedIn: linkedin.com/in/yourprofile |
+    Email: your.email@example.com \contactsep
+    Phone: +1 (123) 456-7890 \contactsep
+    LinkedIn: linkedin.com/in/yourprofile \contactsep
     GitHub: github.com/yourusername
 }
 ```
+
+**Note**: Use `\contactsep` for separators between contact items. This ensures consistent spacing.
 
 #### 3. Bio/Professional Summary
 
@@ -176,17 +178,22 @@ cp cv-content.tex cv-content-software-engineer.tex
 cp cv-content.tex cv-content-data-scientist.tex
 ```
 
-Then compile with specific content:
+### Method 1: Command Line (Recommended)
 
-```latex
-% In cv-template.tex, change line 61:
-\input{cv-content-software-engineer.tex}
-```
-
-Or use the command line:
+Compile with a specific content file without modifying the template:
 
 ```bash
 pdflatex "\def\contentfile{cv-content-software-engineer.tex}\input{cv-template.tex}"
+```
+
+This is the easiest way to maintain multiple CV versions!
+
+### Method 2: Edit Template
+
+Alternatively, edit `cv-template.tex` and change the input line (around line 71):
+
+```latex
+\input{cv-content-software-engineer.tex}
 ```
 
 ## Contributing
