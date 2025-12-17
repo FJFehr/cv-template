@@ -12,7 +12,7 @@
 \usepackage[utf8]{inputenc}
 
 % Page margins - optimized for readability
-\usepackage[scale=0.85]{geometry}
+\usepackage[scale=0.85,top=1cm]{geometry}
 \setlength{\hintscolumnwidth}{3cm}
 
 % Section spacing - more air between sections
@@ -23,8 +23,12 @@
 \renewcommand*{\sectionfont}{\Large\bfseries\upshape}
 
 % Custom colours - must come after moderncv style
-\definecolor{textgrey}{RGB}{20,20,20}
+\definecolor{textgrey}{RGB}{50,50,50}
 \AtBeginDocument{\color{textgrey}}
+
+% Reduce vertical spacing around title
+\usepackage{titling}
+\setlength{\droptitle}{-8em}
 
 % Custom command for better spacing control
 \newcommand{\cvitemcompact}[2]{%
@@ -44,6 +48,7 @@
 \begin{document}
 
 \makecvtitle
+\vspace{-2em}
 
 % ===============================================
 % RESEARCH SUMMARY (2 lines)
