@@ -1,0 +1,33 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.blg
+*.bbl
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.ps
+
+# METAFONT files
+*.mf
+*.tfm
+*.600gf
+*.600pk
+
+# Preview images (temporary)
+cv-preview-*.png
+
+# PDF output (optional - uncomment if you don't want to commit PDFs)
+# *.pdf
+
+# Temporary files
+*~
+.DS_Store

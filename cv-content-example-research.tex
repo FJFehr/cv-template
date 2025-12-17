@@ -1,0 +1,138 @@
+% Example CV Content File - Optimized for Research/Academic Position
+% This example shows how to toggle sections for a research-focused application
+%
+% For this research position, we:
+% - Keep bio (research-focused), education, publications, and awards
+% - De-emphasize industry experience (show but brief)
+% - Keep skills but focus on research tools
+
+% =============================================================================
+% TOGGLE SECTIONS ON/OFF
+% Set to "true" to show, "false" to hide
+% =============================================================================
+\renewcommand{\togglebio}{true}
+\renewcommand{\toggleexperience}{true}
+\renewcommand{\toggleeducation}{true}
+\renewcommand{\toggleawards}{true}        % Show awards - relevant for research
+\renewcommand{\toggleskills}{true}
+\renewcommand{\togglepublications}{true}  % Show publications - critical for research
+
+% =============================================================================
+% PERSONAL INFORMATION
+% =============================================================================
+\newcommand{\cvname}{Dr. Alex Chen}
+\newcommand{\cvcontact}{%
+    Email: alex.chen@university.edu \hspace{4pt}|\hspace{4pt}
+    Phone: +1 (555) 987-6543 \hspace{4pt}|\hspace{4pt}
+    Google Scholar: scholar.google.com/alexchen \hspace{4pt}|\hspace{4pt}
+    Website: alexchen.research.edu
+}
+
+% =============================================================================
+% BIO / PROFESSIONAL SUMMARY
+% Tailored for research/academic position
+% =============================================================================
+\newcommand{\cvbio}{%
+    Computer science researcher specializing in machine learning and natural language processing 
+    with 8 years of experience in developing novel algorithms and publishing in top-tier venues. 
+    PhD in Computer Science with focus on deep learning for language understanding. 
+    Passionate about advancing the state-of-the-art in AI and mentoring graduate students.
+}
+
+% =============================================================================
+% EXPERIENCE
+% Emphasizing research roles and academic contributions
+% =============================================================================
+\newcommand{\cvexperience}{%
+    \cventry{Postdoctoral Researcher}{Sep 2020 -- Present}{AI Research Lab, MIT, Cambridge, MA}{%
+        \begin{itemize}
+            \item Developed novel transformer architectures improving NLP performance by 15\% on benchmark tasks
+            \item Published 8 papers in top conferences (NeurIPS, ICML, ACL) as first author
+            \item Mentored 3 PhD students and 5 master's students on research projects
+            \item Secured \$500K research grant from NSF for language model interpretability study
+        \end{itemize}
+    }
+    
+    \cventry{Research Scientist Intern}{Summer 2019}{Google Research, Mountain View, CA}{%
+        \begin{itemize}
+            \item Researched efficient attention mechanisms for large-scale language models
+            \item Contributed to open-source NLP library used by 10K+ researchers
+            \item Co-authored paper accepted at NeurIPS 2020
+        \end{itemize}
+    }
+}
+
+% =============================================================================
+% EDUCATION
+% =============================================================================
+\newcommand{\cveducation}{%
+    \cvsimpleentry{Ph.D. in Computer Science}{May 2020}{
+        Stanford University, Stanford, CA -- Dissertation: ``Efficient Attention Mechanisms for Neural Language Models''
+    }
+    
+    \cvsimpleentry{M.S. in Computer Science}{May 2016}{
+        University of California, Berkeley, CA -- GPA: 3.95/4.0
+    }
+    
+    \cvsimpleentry{B.S. in Computer Science and Mathematics}{May 2014}{
+        Carnegie Mellon University, Pittsburgh, PA -- Summa Cum Laude, GPA: 3.98/4.0
+    }
+}
+
+% =============================================================================
+% AWARDS & HONORS
+% Important for research positions
+% =============================================================================
+\newcommand{\cvawards}{%
+    \cvsimpleentry{Outstanding Paper Award}{2022}{NeurIPS (Neural Information Processing Systems)}
+    
+    \cvsimpleentry{Best Thesis Award}{2020}{Stanford Computer Science Department}
+    
+    \cvsimpleentry{NSF Graduate Research Fellowship}{2016--2019}{National Science Foundation}
+    
+    \cvsimpleentry{Outstanding Graduate Student Award}{2019}{Stanford University}
+}
+
+% =============================================================================
+% SKILLS
+% Focusing on research tools and methodologies
+% =============================================================================
+\newcommand{\cvskills}{%
+    \textbf{Research Areas:} Machine Learning, Natural Language Processing, Deep Learning, Transfer Learning\\[4pt]
+    \textbf{Programming:} Python, C++, CUDA, R, MATLAB\\[4pt]
+    \textbf{ML Frameworks:} PyTorch, TensorFlow, JAX, Hugging Face Transformers\\[4pt]
+    \textbf{Research Tools:} Jupyter, Git, LaTeX, Weights \& Biases, MLflow\\[4pt]
+    \textbf{Cloud Computing:} AWS, Google Cloud, Slurm (HPC clusters)\\[4pt]
+    \textbf{Other:} Technical Writing, Grant Writing, Academic Presentation, Student Mentoring
+}
+
+% =============================================================================
+% PUBLICATIONS
+% Critical section for research positions - full list
+% =============================================================================
+\newcommand{\cvpublications}{%
+    \cvpublication{%
+        \textbf{A. Chen}, B. Wang, C. Li. ``Efficient Transformers with Linear Attention.'' 
+        \textit{Conference on Neural Information Processing Systems (NeurIPS)}, 2022. \textbf{Outstanding Paper Award.}
+    }
+    
+    \cvpublication{%
+        \textbf{A. Chen}, D. Kumar. ``Cross-lingual Transfer Learning for Low-Resource Languages.'' 
+        \textit{Annual Meeting of the Association for Computational Linguistics (ACL)}, 2021.
+    }
+    
+    \cvpublication{%
+        E. Martinez, \textbf{A. Chen}, F. Zhang. ``Interpretable Attention Mechanisms in Neural Networks.'' 
+        \textit{International Conference on Machine Learning (ICML)}, 2021.
+    }
+    
+    \cvpublication{%
+        \textbf{A. Chen}, G. Thompson. ``Meta-Learning for Few-Shot Natural Language Understanding.'' 
+        \textit{Conference on Empirical Methods in Natural Language Processing (EMNLP)}, 2020.
+    }
+    
+    \cvpublication{%
+        \textbf{A. Chen}, H. Park, I. Ahmed. ``Attention is All You Need: A Survey.'' 
+        \textit{Journal of Machine Learning Research (JMLR)}, Vol. 21, No. 1, Pages 1-45, 2019.
+    }
+}

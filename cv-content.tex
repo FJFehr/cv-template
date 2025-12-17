@@ -1,0 +1,112 @@
+% CV Content File
+% Edit this file to add your personal information
+% Set toggles to "true" or "false" to show/hide sections
+
+% =============================================================================
+% TOGGLE SECTIONS ON/OFF
+% Set to "true" to show, "false" to hide
+% =============================================================================
+\renewcommand{\togglebio}{true}
+\renewcommand{\toggleexperience}{true}
+\renewcommand{\toggleeducation}{true}
+\renewcommand{\toggleawards}{true}
+\renewcommand{\toggleskills}{true}
+\renewcommand{\togglepublications}{true}
+
+% =============================================================================
+% PERSONAL INFORMATION
+% =============================================================================
+\newcommand{\cvname}{Your Full Name}
+\newcommand{\cvcontact}{%
+    Email: your.email@example.com \hspace{4pt}|\hspace{4pt}
+    Phone: +1 (123) 456-7890 \hspace{4pt}|\hspace{4pt}
+    LinkedIn: linkedin.com/in/yourprofile \hspace{4pt}|\hspace{4pt}
+    GitHub: github.com/yourusername
+}
+
+% =============================================================================
+% BIO / PROFESSIONAL SUMMARY
+% Optimize this section for each job application
+% =============================================================================
+\newcommand{\cvbio}{%
+    Experienced software engineer with 5+ years developing scalable web applications.
+    Passionate about clean code, system design, and mentoring junior developers.
+    Seeking to leverage expertise in full-stack development to build innovative solutions.
+}
+
+% =============================================================================
+% EXPERIENCE
+% Use \cventry{Job Title}{Date Range}{Company Name}{Description and bullets}
+% =============================================================================
+\newcommand{\cvexperience}{%
+    \cventry{Senior Software Engineer}{Jan 2021 -- Present}{Tech Company Inc., San Francisco, CA}{%
+        \begin{itemize}
+            \item Led development of microservices architecture serving 1M+ daily active users
+            \item Reduced API response time by 40\% through database optimization and caching
+            \item Mentored 5 junior engineers and conducted code reviews
+            \item Implemented CI/CD pipeline reducing deployment time by 60\%
+        \end{itemize}
+    }
+    
+    \cventry{Software Engineer}{Jun 2018 -- Dec 2020}{Startup Co., New York, NY}{%
+        \begin{itemize}
+            \item Developed RESTful APIs using Node.js and Express, handling 100K+ requests/day
+            \item Built responsive frontend using React and Redux
+            \item Collaborated with product team to define technical requirements
+            \item Reduced bug count by 30\% through comprehensive unit testing
+        \end{itemize}
+    }
+}
+
+% =============================================================================
+% EDUCATION
+% Use \cvsimpleentry{Degree}{Graduation Date}{Institution}
+% =============================================================================
+\newcommand{\cveducation}{%
+    \cvsimpleentry{Master of Science in Computer Science}{May 2018}{
+        University of Technology, Boston, MA -- GPA: 3.8/4.0
+    }
+    
+    \cvsimpleentry{Bachelor of Science in Computer Science}{May 2016}{
+        State University, Austin, TX -- GPA: 3.7/4.0
+    }
+}
+
+% =============================================================================
+% AWARDS & HONORS
+% Use \cvsimpleentry{Award Name}{Date}{Organization/Details}
+% =============================================================================
+\newcommand{\cvawards}{%
+    \cvsimpleentry{Employee of the Year}{2022}{Tech Company Inc.}
+    
+    \cvsimpleentry{Best Innovation Award}{2019}{Startup Co. -- For developing customer analytics platform}
+    
+    \cvsimpleentry{Dean's List}{2014--2016}{State University}
+}
+
+% =============================================================================
+% SKILLS
+% List your technical and professional skills
+% =============================================================================
+\newcommand{\cvskills}{%
+    \textbf{Programming Languages:} JavaScript, Python, Java, C++, SQL\\[4pt]
+    \textbf{Frameworks \& Libraries:} React, Node.js, Express, Django, Spring Boot\\[4pt]
+    \textbf{Tools \& Technologies:} Git, Docker, Kubernetes, AWS, PostgreSQL, MongoDB\\[4pt]
+    \textbf{Soft Skills:} Team Leadership, Agile/Scrum, Technical Writing, Public Speaking
+}
+
+% =============================================================================
+% PUBLICATIONS
+% Use \cvpublication{Full citation in your preferred format}
+% =============================================================================
+\newcommand{\cvpublications}{%
+    \cvpublication{%
+        \textbf{Your Name}, Co-Author Name. ``Title of Your Research Paper.'' 
+        \textit{Conference/Journal Name}, Year. DOI or URL.
+    }
+    
+    \cvpublication{%
+        Co-Author Name, \textbf{Your Name}, Another Author. ``Another Research Paper Title.'' 
+        \textit{Journal Name}, Vol. X, No. Y, Pages, Year.
+    }
+}

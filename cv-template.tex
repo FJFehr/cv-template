@@ -1,0 +1,112 @@
+% Minimalist ATS-Friendly CV Template
+% Clean typography optimized for human readers and ATS bots
+% No photos, simple structure, easy parsing
+
+\documentclass[11pt,a4paper]{article}
+
+% Essential packages only
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{ifthen}
+
+% Hyperlink setup (ATS-friendly)
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    pdfborder={0 0 0}
+}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Reduce spacing
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=*,nosep,topsep=2pt}
+
+% Define section formatting
+\newcommand{\cvsection}[1]{%
+    \vspace{8pt}%
+    {\large\textbf{#1}}\\[4pt]%
+    \rule{\textwidth}{0.4pt}%
+    \vspace{4pt}%
+}
+
+% Define subsection for entries
+\newcommand{\cventry}[4]{%
+    \textbf{#1} \hfill #2\\
+    \textit{#3}\\
+    #4
+    \vspace{6pt}
+}
+
+% Define simple entry (for education, awards)
+\newcommand{\cvsimpleentry}[3]{%
+    \textbf{#1} \hfill #2\\
+    \textit{#3}
+    \vspace{6pt}
+}
+
+% Define publication entry
+\newcommand{\cvpublication}[1]{%
+    #1
+    \vspace{4pt}
+}
+
+% Toggle commands (to be set in cv-content.tex)
+\newcommand{\togglebio}{true}
+\newcommand{\toggleexperience}{true}
+\newcommand{\toggleeducation}{true}
+\newcommand{\toggleawards}{true}
+\newcommand{\toggleskills}{true}
+\newcommand{\togglepublications}{true}
+
+% Input the content file
+\input{cv-content.tex}
+
+\begin{document}
+
+% Header with name and contact info
+{\Huge\textbf{\cvname}}\\[8pt]
+\cvcontact
+
+% Bio section (toggle)
+\ifthenelse{\equal{\togglebio}{true}}{%
+    \vspace{12pt}
+    \cvbio
+}{}
+
+% Experience section (toggle)
+\ifthenelse{\equal{\toggleexperience}{true}}{%
+    \cvsection{Experience}
+    \cvexperience
+}{}
+
+% Education section (toggle)
+\ifthenelse{\equal{\toggleeducation}{true}}{%
+    \cvsection{Education}
+    \cveducation
+}{}
+
+% Awards section (toggle)
+\ifthenelse{\equal{\toggleawards}{true}}{%
+    \cvsection{Awards \& Honors}
+    \cvawards
+}{}
+
+% Skills section (toggle)
+\ifthenelse{\equal{\toggleskills}{true}}{%
+    \cvsection{Skills}
+    \cvskills
+}{}
+
+% Publications section (toggle)
+\ifthenelse{\equal{\togglepublications}{true}}{%
+    \cvsection{Publications}
+    \cvpublications
+}{}
+
+\end{document}

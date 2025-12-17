@@ -1,0 +1,116 @@
+% Example CV Content File - Optimized for Software Engineering Role
+% This example shows how to toggle sections for a specific job application
+%
+% For this software engineering role, we:
+% - Keep bio, experience, education, and skills
+% - Hide awards (not relevant to this role)
+% - Hide publications (focusing on industry, not research)
+
+% =============================================================================
+% TOGGLE SECTIONS ON/OFF
+% Set to "true" to show, "false" to hide
+% =============================================================================
+\renewcommand{\togglebio}{true}
+\renewcommand{\toggleexperience}{true}
+\renewcommand{\toggleeducation}{true}
+\renewcommand{\toggleawards}{false}        % Hidden for this application
+\renewcommand{\toggleskills}{true}
+\renewcommand{\togglepublications}{false}  % Hidden for this application
+
+% =============================================================================
+% PERSONAL INFORMATION
+% =============================================================================
+\newcommand{\cvname}{Jane Smith}
+\newcommand{\cvcontact}{%
+    Email: jane.smith@email.com \hspace{4pt}|\hspace{4pt}
+    Phone: +1 (555) 123-4567 \hspace{4pt}|\hspace{4pt}
+    LinkedIn: linkedin.com/in/janesmith \hspace{4pt}|\hspace{4pt}
+    GitHub: github.com/janesmith
+}
+
+% =============================================================================
+% BIO / PROFESSIONAL SUMMARY
+% Tailored for software engineering position
+% =============================================================================
+\newcommand{\cvbio}{%
+    Senior software engineer with 7+ years of experience building scalable distributed systems 
+    and leading high-performing engineering teams. Passionate about clean architecture, 
+    performance optimization, and delivering user-centric solutions. Seeking challenging 
+    opportunities to architect innovative software at scale.
+}
+
+% =============================================================================
+% EXPERIENCE
+% Highlighting software development achievements
+% =============================================================================
+\newcommand{\cvexperience}{%
+    \cventry{Lead Software Engineer}{Mar 2020 -- Present}{TechCorp Inc., Seattle, WA}{%
+        \begin{itemize}
+            \item Architected and deployed microservices infrastructure handling 5M+ daily transactions
+            \item Improved system reliability from 99.5\% to 99.95\% uptime through monitoring and automated recovery
+            \item Led team of 6 engineers delivering 3 major product releases on schedule
+            \item Reduced cloud infrastructure costs by 35\% through optimization and right-sizing
+        \end{itemize}
+    }
+    
+    \cventry{Senior Software Engineer}{Jun 2018 -- Feb 2020}{StartupXYZ, San Francisco, CA}{%
+        \begin{itemize}
+            \item Built real-time analytics platform processing 100GB+ data daily using Kafka and Spark
+            \item Implemented GraphQL API reducing mobile app load times by 50\%
+            \item Mentored junior engineers and established code review best practices
+            \item Contributed to open-source projects improving Docker deployment workflows
+        \end{itemize}
+    }
+    
+    \cventry{Software Engineer}{Jan 2016 -- May 2018}{DataFlow Systems, Austin, TX}{%
+        \begin{itemize}
+            \item Developed data pipeline processing 10M+ records daily with 99.9\% accuracy
+            \item Integrated third-party APIs and payment systems for e-commerce platform
+            \item Implemented comprehensive test coverage increasing code quality metrics by 40\%
+        \end{itemize}
+    }
+}
+
+% =============================================================================
+% EDUCATION
+% =============================================================================
+\newcommand{\cveducation}{%
+    \cvsimpleentry{Bachelor of Science in Computer Science}{May 2015}{
+        University of Washington, Seattle, WA -- GPA: 3.9/4.0, Magna Cum Laude
+    }
+}
+
+% =============================================================================
+% AWARDS & HONORS
+% Hidden for this application
+% =============================================================================
+\newcommand{\cvawards}{%
+    \cvsimpleentry{Engineering Excellence Award}{2021}{TechCorp Inc.}
+    
+    \cvsimpleentry{Hackathon Winner}{2019}{StartupXYZ Internal Hackathon}
+}
+
+% =============================================================================
+% SKILLS
+% Emphasizing software engineering tools and technologies
+% =============================================================================
+\newcommand{\cvskills}{%
+    \textbf{Programming Languages:} Python, Java, Go, JavaScript/TypeScript, SQL, C++\\[4pt]
+    \textbf{Backend Technologies:} Node.js, Spring Boot, Django, Flask, GraphQL, REST APIs\\[4pt]
+    \textbf{Frontend:} React, Vue.js, Redux, HTML5, CSS3, Webpack\\[4pt]
+    \textbf{Databases:} PostgreSQL, MongoDB, Redis, Elasticsearch, MySQL\\[4pt]
+    \textbf{Cloud \& DevOps:} AWS (EC2, S3, Lambda, RDS), Docker, Kubernetes, Terraform, Jenkins, CircleCI\\[4pt]
+    \textbf{Data \& Streaming:} Apache Kafka, Apache Spark, Airflow\\[4pt]
+    \textbf{Practices:} Agile/Scrum, TDD, CI/CD, Microservices, System Design, Code Review
+}
+
+% =============================================================================
+% PUBLICATIONS
+% Hidden for this application - focusing on industry experience
+% =============================================================================
+\newcommand{\cvpublications}{%
+    \cvpublication{%
+        \textbf{Jane Smith}, John Doe. ``Scalable Microservices Architecture for E-Commerce.'' 
+        \textit{Tech Conference 2022}, 2022.
+    }
+}
