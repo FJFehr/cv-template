@@ -190,7 +190,7 @@ This is the easiest way to maintain multiple CV versions!
 
 ### Method 2: Edit Template
 
-Alternatively, edit `cv-template.tex` and change the input line (around line 71):
+Alternatively, edit `cv-template.tex` and change the default content file on line 76:
 
 ```latex
 \input{cv-content-software-engineer.tex}

@@ -60,10 +60,12 @@ cp cv-content.tex cv-content-software.tex
 cp cv-content.tex cv-content-research.tex
 ```
 
-Edit each for specific roles, then change line 61 in `cv-template.tex`:
-```latex
-\input{cv-content-software.tex}  % Instead of cv-content.tex
+Edit each for specific roles, then use the command line:
+```bash
+pdflatex "\def\contentfile{cv-content-software.tex}\input{cv-template.tex}"
 ```
+
+Or edit line 76 in `cv-template.tex` to change the default content file.
 
 ### Toggle Strategy
 
@@ -80,8 +82,8 @@ Check out the example files:
 
 Compile them to see different layouts:
 ```bash
-# Edit cv-template.tex line 61 to: \input{cv-content-example-software.tex}
-pdflatex cv-template.tex
+# Use command line to compile with different content
+pdflatex "\def\contentfile{cv-content-example-software.tex}\input{cv-template.tex}"
 ```
 
 ## Troubleshooting
