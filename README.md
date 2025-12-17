@@ -1,91 +1,136 @@
-# Minimalist CV/Resume Template in LaTeX
+# Comprehensive LaTeX CV for Fabio J. Fehr
 
-A clean, professional CV template optimized for both human readers and Applicant Tracking Systems (ATS). Features a modular design that separates content from formatting, making it highly reusable and easy to customize for different job applications.
+A minimalist LaTeX CV template using moderncv with clean typography that is ATS-friendly. 
+This template is initialized with your basic information from your website and LinkedIn.
 
-## ✨ Features
+## Quick Start
 
-- **Clean Typography**: Minimalist design focused on readability
-- **ATS-Friendly**: No photos, simple structure for machine parsing
-- **Modular Architecture**: Content separated from template formatting
-- **Simple Customization**: Comment out sections you don't need
-- **Comprehensive Sections**: Bio, Experience, Education, Skills, Publications, Awards
-- **Easy to Use**: Edit only one file (`cv-content.tex`) for all your information
+Your CV is already set up with basic information! Now you need to fill in complete details.
 
-## 🚀 Quick Start
-
-### Prerequisites
-
-You need a LaTeX distribution installed:
-- **Linux**: `sudo apt-get install texlive-full`
-- **macOS**: Install [MacTeX](https://www.tug.org/mactex/)
-- **Windows**: Install [MiKTeX](https://miktex.org/) or [TeX Live](https://www.tug.org/texlive/)
-
-### Compilation
+### 1. View Current CV
 
 ```bash
-# Compile the CV
+cd /home/fabio/Projects/cv-template
+xdg-open cv-template.pdf  # View the current PDF
+```
+
+### 2. Fill In Missing Information
+
+**READ THE GUIDE FIRST:** Open `FILL-IN-GUIDE.md` for detailed step-by-step instructions!
+
+```bash
+cat FILL-IN-GUIDE.md  # or open in your editor
+```
+
+The guide tells you:
+- What information to add
+- Where to find it (your website's YAML files)
+- How to format it properly
+
+### 3. Edit Your Content
+
+Edit `cv-content.tex` to fill in the TODOs:
+
+```bash
+nano cv-content.tex  # or use your preferred editor
+```
+
+**What's Already Done:**
+- ✅ Name: Fabio J. Fehr
+- ✅ Website: fjfehr.github.io
+- ✅ LinkedIn: fabio-j-fehr
+- ✅ GitHub: FJFehr
+- ✅ Basic bio from your website
+- ✅ Structure for Oxford postdoc and Amazon internship
+- ✅ Placeholders for PhD and Master's details
+
+**What You Need To Do:**
+- 📝 Update email address
+- 📝 Add Google Scholar ID
+- 📝 Fill in complete work experience from `timeline.yaml`
+- 📝 Fill in complete education details from `timeline.yaml`
+- 📝 Add ALL publications from `publications.yaml`
+- 📝 Add awards and honors
+- 📝 Expand skills section
+- 📝 Complete additional information
+
+### 4. Compile After Editing
+
+```bash
 pdflatex cv-template.tex
-
-# Or use latexmk for automatic compilation
-latexmk -pdf cv-template.tex
+pdflatex cv-template.tex  # Run twice for proper formatting
 ```
 
-## 📝 How to Use
+### 5. View Updated PDF
 
-### Step 1: Edit Your Information
-
-Open `cv-content.tex` and update with your personal information:
-
-```latex
-% Personal details
-\name{Your}{Name}
-\title{Your Job Title}
-\email{your.email@example.com}
-\phone{+1~(234)~567~890}
-
-% Update each section with your information
-\newcommand{\userbio}{
-  Your professional summary here...
-}
-
-\newcommand{\userexperience}{
-  \cventry{2021--Present}{Job Title}{Company}{Location}{}{
-    \begin{itemize}
-      \item Achievement 1
-      \item Achievement 2
-    \end{itemize}
-  }
-}
-
-% ... and so on for other sections
+```bash
+xdg-open cv-template.pdf
 ```
 
-### Step 2: Hide/Show Sections
+## Where To Find Your Data
 
-To hide a section, simply comment it out in `cv-content.tex`:
+All your information is in your website repository:
 
-```latex
-% Comment out sections you don't want
-% \newcommand{\userawards}{%
-%   \cvitem{2024}{Outstanding Paper Award, NeurIPS 2024}
-%   ...
-% }
+```bash
+# Clone your website if you haven't already:
+cd /home/fabio/Projects/
+git clone https://github.com/FJFehr/fjfehr.github.io.git
+
+# Then view your data files:
+cat fjfehr.github.io/content/timeline/timeline.yaml        # Experience & Education
+cat fjfehr.github.io/content/publications/publications.yaml  # Publications
+cat fjfehr.github.io/content/site/config.yaml              # Email & Social Links
 ```
 
-Or comment out entire sections in `cv-template.tex`:
+## Structure
+
+- `cv-template.tex` - Main template file (DO NOT EDIT)
+- `cv-content.tex` - Your personal information (EDIT THIS)
+- `FILL-IN-GUIDE.md` - **READ THIS FIRST** - Detailed instructions
+- `.gitignore` - Excludes LaTeX build artifacts
+- `README.md` - This file
+
+## Customizing for Specific Jobs
+
+The template is designed to be **comprehensive** - include everything. Then:
+
+1. Open `cv-content.tex`
+2. Comment out sections you don't need (add `%` at start of lines)
+3. Adjust the bio for the specific position
+4. Recompile
+
+### Example: Hide Additional Information Section
 
 ```latex
 % \section{Additional Information}
 % \useradditional
 ```
 
-### Step 3: Compile
+## Tips for Academic CVs
 
-```bash
-pdflatex cv-template.tex
-```
+1. **Be comprehensive** - Include everything (unlike a resume)
+2. **Bold your name** in publications - Use `\textbf{Fehr, F. J.}`
+3. **Order chronologically** - Most recent first in each section
+4. **Be specific** - Exact dates, advisor names, institutions
+5. **Quantify** - "Published 5 papers at top venues" vs "Published papers"
+6. **Keep current** - Update after each achievement
 
-Your CV will be generated as `cv-template.pdf`.
+## Features
+
+- ✨ Clean, minimalist design (Apple-inspired)
+- 📄 No photo (ATS-friendly, cleaner look)
+- 🎯 Decoupled template and content
+- 🔧 Easy customization by commenting sections
+- 📚 Professional typography for readability
+- 🤖 ATS-compatible formatting
+
+## Need Help?
+
+- **Content questions**: Check `FILL-IN-GUIDE.md`
+- **LaTeX issues**: See moderncv documentation
+- **Your data**: Check your website's YAML files at `fjfehr.github.io/content/`
 
 ---
 
+**Remember:** The goal is to create a **verbose, comprehensive CV** with ALL your accomplishments. 
+You can always create shorter versions by commenting out sections for specific job applications!
