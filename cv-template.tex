@@ -1,0 +1,91 @@
+% Minimalist CV Template
+% Clean typography optimized for human readers and ATS systems
+% No photos, highly customizable sections with toggle functionality
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% Modern CV style and color scheme
+\moderncvstyle{classic}
+\moderncvcolor{black}
+
+% Character encoding
+\usepackage[utf8]{inputenc}
+
+% Page margins - optimized for readability
+\usepackage[scale=0.85]{geometry}
+\setlength{\hintscolumnwidth}{3cm}
+
+% Reduce vertical spacing for a more compact look
+\usepackage{etoolbox}
+\patchcmd{\section}{1ex}{0.5ex}{}{}
+
+% Custom command for better spacing control
+\newcommand{\cvitemcompact}[2]{%
+  \cvitem{#1}{#2}%
+}
+
+% Smaller bullet points for cleaner minimalist look
+\renewcommand{\labelitemi}{\small$\bullet$}
+
+% Load user content
+\input{cv-content}
+
+% ===============================================
+% DOCUMENT START
+% ===============================================
+
+\begin{document}
+
+\makecvtitle
+
+% ===============================================
+% ABOUT
+% ===============================================
+
+\section{About}
+\cvitem{}{\userbio}
+
+% ===============================================
+% EXPERIENCE
+% ===============================================
+
+\section{Experience}
+\userexperience
+
+% ===============================================
+% EDUCATION
+% ===============================================
+
+\section{Education}
+\usereducation
+
+% ===============================================
+% RESEARCH & PUBLICATIONS
+% ===============================================
+
+\section{Research \& Publications}
+\userpublications
+
+% ===============================================
+% AWARDS & HONORS
+% ===============================================
+
+\section{Awards \& Honors}
+\userawards
+
+% ===============================================
+% SKILLS
+% ===============================================
+
+\section{Skills}
+\userskills
+
+% ===============================================
+% ADDITIONAL SECTIONS (Optional)
+% ===============================================
+% Uncomment the section below if you want to include additional information
+
+% \section{Additional Information}
+% \useradditional
+
+\end{document}
